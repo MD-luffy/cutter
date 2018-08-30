@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>裁剪demo</title>
+		<link rel="stylesheet" href="cutter.css">
+		<script src="cutter.js"></script>
+		<style>
+			#imgRegion {
+				display: flex;
+				width: 100%;
+			}
+			#imgRegion img {
+				flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="file" multiple="true">		
+		<button>开始裁剪</button>
+		<script src="cutter.js"></script>		
+		<script type="text/javascript">
+			// document.querySelector('button').onclick = function(e) {
+				CutterInit({
+					urls: ['http://test.qulv.com:8073/root/2018/05/10/16/01/x3ap4idp.dzl.jpg'],
+					ratio: '2/1',
+					width: 200,
+					height: 100,
+					callback: function(data) {
+						console.log(data)
+					}
+				})
+			// }
+			document.querySelector('input').onchange = function(e) {
+				CutterInit({
+					files: e.target.files,
+					ratio: '3/2',
+					width: 300,
+					height: 200,
+					callback: function(data) {
+						console.log(data)
+					}
+				})				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.cutter-tool {
+	width: 500px;
+	max-height: 400px;
+	overflow-y: scroll;
+	background: #ffffff;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 3px;
+}
+.cutter-tool p {
+	text-align: center;
+	color: #676665;
+	font-weight: normal;
+	margin: 8px 0;
+}
+.cutter-tool p i {
+	font-style: normal;
+}
+.cutter-tool .work-region {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.cutter-tool img {
+	position: relative;
+	display: block;
+}
+.cutter-tool .cutter {
+	cursor: move;
+	position: absolute;
+	opacity: .3;
+	background: lightgray;
+}
+.cutter-tool .cutter .left {
+	height: 100%;
+	border-right: 2px dashed blue;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: e-resize;
+}
+.cutter-tool .cutter .top {
+	width: 100%;
+	border-bottom: 2px dashed blue;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.cutter-tool .cutter .right {
+	height: 100%;
+	border-left: 2px dashed blue;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: e-resize;
+}
+.cutter-tool .cutter .bottom {
+	width: 100%;
+	border-top: 2px dashed blue;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.cutter-tool .confirm {
+	text-align: center;
+	margin: 10px 0;
+}
+.cutter-tool .confirm button {
+	line-height: 30px;
+	height: 30px;
+	width: 80px;
+	font-size: 14px;
+	background: #337ab7;
+	color: white;
+	cursor: pointer;
+	border-radius: 3px;
+	padding: 0;
+	border: 0;
+}
+.cutter-tool .confirm button:nth-child(1) {
+	background: #44b549;
+	margin-right: 50px;
+}
+.cutter-tool .confirm button[disabled] {
+	background: #d3d3d3;
+}
+.cutter-mask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    opacity: .7;
+    background: #777575;
+}
+.cutter-tool .progress {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	opacity: .8;
+	background: #51565a;
+}
+.cutter-tool .progress span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.cutter-tool .progress img {
+	width: auto;
+}
