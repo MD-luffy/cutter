@@ -228,11 +228,10 @@
             Height: _desHeight.toFixed()
         }]))
 
+
 		var xhr = new XMLHttpRequest()
+		//把这个url改成要上传的地址，然后确保传参都正确就行
 		var url = '//uploadfile.qulv.com/api/uploadimage/qboss?uploadType=1'
-		if (qhub !== undefined) {
-			url = qhub.app.resolveUrl('/api/uploadimage/qboss?uploadType=1', {appName: 'qfs.app'})
-		}
 		xhr.open('post', url, true)
 		xhr.send(data)
 		progressUI(true)
